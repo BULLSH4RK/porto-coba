@@ -31,6 +31,9 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
+      - name: Generate avatar data URI
+        run: node scripts/generate-avatar.cjs
+
       - name: Build single-file bundle
         run: |
           pnpm exec parcel build index.html --dist-dir dist --no-source-maps

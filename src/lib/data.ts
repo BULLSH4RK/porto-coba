@@ -1,3 +1,5 @@
+import avatarData from "./avatar"
+
 export const profile = {
   name: "Aditya Yudha Hari Pratama",
   role: "IT Student @ Telkom University",
@@ -5,7 +7,7 @@ export const profile = {
   location: "Indonesia",
   bio: "Fokus pada tantangan CTF dan pembangunan sistem POS yang aman dan efisien. Eksplorasi mendalam pada Teori Graph, Modular Arithmetic, dan Cybersecurity Tactics.",
   email: "adityayudha.works@gmail.com",
-  avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Aditya",
+  avatar: avatarData,
   codeSnippet: `// TryHackMe: yoodha
 // Status: CTF Active
 // Skill: LFI to RCE`,

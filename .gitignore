@@ -26,3 +26,5 @@ dist-ssr
 bundle.html
 .parcel-cache
 dist
+
+src/lib/avatar.ts
