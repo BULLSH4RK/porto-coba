@@ -23,8 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 
-bundle.html
-.parcel-cache
-dist
+# Build artifacts
+dist/
+.bundle.html
+.parcel-cache/
 
-src/lib/avatar.ts
+# Build output
+build/
