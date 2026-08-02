@@ -1,4 +1,4 @@
-import avatarData from "./avatar"
+import profileImage from "@/assets/profile.jpg"
 
 export const profile = {
   name: "Aditya Yudha Hari Pratama",
@@ -7,7 +7,7 @@ export const profile = {
   location: "Indonesia",
   bio: "Fokus pada tantangan CTF dan pembangunan sistem POS yang aman dan efisien. Eksplorasi mendalam pada Teori Graph, Modular Arithmetic, dan Cybersecurity Tactics.",
   email: "adityayudha.works@gmail.com",
-  avatar: avatarData,
+  avatar: profileImage,
   codeSnippet: `// TryHackMe: yoodha
 // Status: CTF Active
 // Skill: LFI to RCE`,
