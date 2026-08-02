@@ -1,6 +1,6 @@
 import { AuroraOrbs } from "./components/AuroraOrbs"
 import { NavPill } from "./components/NavPill"
-import { Hero } from "./components/Hero"
+import { GlassmorphismPortfolioBlock } from "./components/ui/glassmorphism-portfolio-block-shadcnui"
 import { About } from "./components/About"
 import { Projects } from "./components/Projects"
 import { Skills } from "./components/Skills"
@@ -15,7 +15,7 @@ function App() {
       <div className="relative z-10">
         <NavPill />
         <main>
-          <Hero />
+          <GlassmorphismPortfolioBlock />
           <About />
           <Projects />
           <Skills />

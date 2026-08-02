@@ -42,8 +42,7 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
         void: "#23212C",
-        mint: "#F8E8C5",
-        amber: "#F8E8C5",
+        mint: "#F1FEC8",
       },
       fontFamily: {
         display: ["Space Grotesk", "sans-serif"],

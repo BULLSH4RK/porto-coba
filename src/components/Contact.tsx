@@ -46,9 +46,9 @@ export function Contact() {
           <div className="space-y-4">
             <a
               href={`mailto:${profile.email}`}
-              className="block glass-amber rounded-2xl p-4 hover:border-mint/30 transition-colors"
+              className="block glass-mint rounded-2xl p-4 hover:border-mint/30 transition-colors"
             >
-              <p className="font-mono text-[10px] uppercase tracking-widest text-amber/70 mb-1">Email</p>
+              <p className="font-mono text-[10px] uppercase tracking-widest text-mint/70 mb-1">Email</p>
               <p className="text-sm font-medium text-foreground break-all">{profile.email}</p>
             </a>
             {profile.links.map((link) => (
@@ -57,9 +57,9 @@ export function Contact() {
                 href={link.href}
                 target="_blank"
                 rel="noreferrer"
-                className="block glass-amber rounded-2xl p-4 hover:border-mint/30 transition-colors"
+                className="block glass-mint rounded-2xl p-4 hover:border-mint/30 transition-colors"
               >
-                <p className="font-mono text-[10px] uppercase tracking-widest text-amber/70 mb-1">Social</p>
+                <p className="font-mono text-[10px] uppercase tracking-widest text-mint/70 mb-1">Social</p>
                 <p className="text-sm font-medium text-foreground">{link.label}</p>
               </a>
             ))}
@@ -116,7 +116,7 @@ export function Contact() {
           </div>
           <Button
             type="submit"
-            className="w-full sm:w-auto bg-amber text-[#23212C] hover:bg-amber/85 font-bold rounded-xl h-12 px-8"
+            className="w-full sm:w-auto bg-mint text-[#23212C] hover:bg-mint/85 font-bold rounded-xl h-12 px-8"
           >
             Kirim Pesan
           </Button>

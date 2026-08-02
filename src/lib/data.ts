@@ -12,12 +12,12 @@ export const profile = {
     {
       label: "GitHub",
       href: "https://github.com/BULLSH4RK",
-      accent: "amber",
+      accent: "mint",
     },
     {
       label: "LinkedIn",
       href: "https://linkedin.com/in/aditya-yudha-hari-pratama-906621407",
-      accent: "amber",
+      accent: "mint",
     },
     {
       label: "TryHackMe",

@@ -3,7 +3,7 @@ import { SectionHeading } from "./SectionHeading"
 import { skills } from "@/lib/data"
 
 const categoryColor: Record<string, string> = {
-  Dev: "text-amber border-amber/30 bg-amber/10",
+  Dev: "text-mint border-mint/30 bg-mint/10",
   Sec: "text-red-300 border-red-300/30 bg-red-300/10",
   Math: "text-sky-300 border-sky-300/30 bg-sky-300/10",
 }

@@ -42,8 +42,8 @@ export function About() {
             variants={fadeUp}
             className="glass glass-hover rounded-[28px] p-8"
           >
-            <div className="w-10 h-10 rounded-xl bg-amber/15 border border-amber/20 flex items-center justify-center mb-5">
-              <span className="w-3 h-3 rounded-full bg-amber animate-pulse" />
+            <div className="w-10 h-10 rounded-xl bg-mint/15 border border-mint/20 flex items-center justify-center mb-5">
+              <span className="w-3 h-3 rounded-full bg-mint animate-pulse" />
             </div>
             <h3 className="font-display text-lg font-bold text-foreground mb-3">{fact.title}</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">{fact.text}</p>

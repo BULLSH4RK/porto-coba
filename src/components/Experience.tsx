@@ -16,7 +16,7 @@ export function Experience() {
       </motion.div>
 
       <div className="relative">
-        <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-amber/40 via-border to-transparent" />
+        <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-mint/40 via-border to-transparent" />
 
         <motion.div
           variants={stagger}
@@ -33,14 +33,14 @@ export function Experience() {
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               }`}
             >
-              <div className="absolute left-4 md:left-1/2 -translate-x-1/2 top-6 w-3 h-3 rounded-full bg-amber shadow-[0_0_12px_rgba(241,254,200,0.6)]" />
+              <div className="absolute left-4 md:left-1/2 -translate-x-1/2 top-6 w-3 h-3 rounded-full bg-mint shadow-[0_0_12px_rgba(241,254,200,0.6)]" />
               <div
                 className={`md:w-1/2 pl-12 md:pl-0 ${
                   index % 2 === 0 ? "md:pr-14 md:text-right" : "md:pl-14"
                 }`}
               >
                 <div className="glass glass-hover rounded-[24px] p-6 inline-block text-left w-full">
-                  <p className="font-mono text-[11px] text-amber uppercase tracking-widest mb-2">
+                  <p className="font-mono text-[11px] text-mint uppercase tracking-widest mb-2">
                     {exp.period}
                   </p>
                   <h4 className="font-display text-lg font-bold text-foreground">{exp.title}</h4>
