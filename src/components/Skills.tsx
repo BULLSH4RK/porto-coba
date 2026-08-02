@@ -12,7 +12,7 @@ export function Skills() {
   const reveal = useScrollReveal()
 
   return (
-    <section id="skills" className="relative py-24 px-6 max-w-6xl mx-auto">
+    <section id="skills" className="relative py-16 sm:py-24 px-4 sm:px-6 max-w-6xl mx-auto">
       <motion.div {...reveal}>
         <SectionHeading
           eyebrow="Skills"
@@ -26,28 +26,28 @@ export function Skills() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
-        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4"
+        className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4"
       >
         {skills.map((skill) => (
           <motion.div
             key={skill.label}
             variants={fadeUp}
-            className="glass glass-hover rounded-2xl p-5 flex flex-col gap-4"
+            className="glass glass-hover rounded-2xl p-4 sm:p-5 flex flex-col justify-between gap-3 sm:gap-4"
           >
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between gap-2 flex-wrap sm:flex-nowrap">
               <span
-                className={`font-mono text-[10px] font-bold uppercase tracking-widest border px-2 py-0.5 rounded-md ${
+                className={`font-mono text-[10px] font-bold uppercase tracking-wider border px-2 py-0.5 rounded-md shrink-0 ${
                   categoryColor[skill.category] ?? "text-muted-foreground border-border bg-white/5"
                 }`}
               >
                 {skill.category}
               </span>
-              <span className="text-xs text-muted-foreground font-mono">
+              <span className="text-[11px] sm:text-xs text-muted-foreground font-mono shrink-0">
                 {"★".repeat(skill.level)}
                 <span className="text-muted-foreground/30">{"★".repeat(5 - skill.level)}</span>
               </span>
             </div>
-            <p className="font-display text-sm font-semibold text-foreground">{skill.label}</p>
+            <p className="font-display text-xs sm:text-sm font-semibold text-foreground leading-snug">{skill.label}</p>
           </motion.div>
         ))}
       </motion.div>

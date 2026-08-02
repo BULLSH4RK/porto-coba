@@ -6,7 +6,7 @@ export function Projects() {
   const reveal = useScrollReveal()
 
   return (
-    <section id="projects" className="relative py-24 px-6 max-w-6xl mx-auto">
+    <section id="projects" className="relative py-16 sm:py-24 px-4 sm:px-6 max-w-6xl mx-auto">
       <motion.div {...reveal}>
         <SectionHeading
           eyebrow="Portfolio"
@@ -20,31 +20,31 @@ export function Projects() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
-        className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6"
       >
         {projects.map((project) => (
           <motion.article
             key={project.title}
             variants={fadeUp}
-            className={`glass glass-hover rounded-[32px] p-8 ${
+            className={`glass glass-hover rounded-[24px] sm:rounded-[32px] p-6 sm:p-8 ${
               project.size === "lg" ? "md:col-span-2" : ""
             }`}
           >
             {project.size === "lg" ? (
-              <div className="flex flex-col md:flex-row gap-8 items-start">
+              <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
                 <div className="flex-1">
                   {project.status && (
-                    <span className="inline-block font-mono text-[10px] font-bold uppercase tracking-widest text-mint bg-mint/10 border border-mint/20 px-2.5 py-1 rounded-full mb-4">
+                    <span className="inline-block font-mono text-[10px] font-bold uppercase tracking-widest text-mint bg-mint/10 border border-mint/20 px-2.5 py-1 rounded-full mb-3 sm:mb-4">
                       {project.status}
                     </span>
                   )}
-                  <h4 className="font-display text-2xl font-bold text-foreground mb-3">
+                  <h4 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-2 sm:mb-3">
                     {project.title}
                   </h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-4 sm:mb-6">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
@@ -55,19 +55,19 @@ export function Projects() {
                     ))}
                   </div>
                 </div>
-                <div className="w-full md:w-44 md:h-44 shrink-0 bg-white/4 rounded-2xl border border-border flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform">
-                  <span className="text-5xl">{project.emoji}</span>
+                <div className="w-full h-32 sm:h-44 md:w-44 md:h-44 shrink-0 bg-white/4 rounded-2xl border border-border flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform">
+                  <span className="text-4xl sm:text-5xl">{project.emoji}</span>
                 </div>
               </div>
             ) : (
               <div>
-                <div className="w-10 h-10 rounded-xl bg-mint/15 border border-mint/20 flex items-center justify-center mb-6 text-lg">
+                <div className="w-10 h-10 rounded-xl bg-mint/15 border border-mint/20 flex items-center justify-center mb-4 sm:mb-6 text-lg">
                   {project.emoji}
                 </div>
-                <h4 className="font-display text-xl font-bold text-foreground mb-3">
+                <h4 className="font-display text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3">
                   {project.title}
                 </h4>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-4 sm:mb-6">
                   {project.description}
                 </p>
                 {project.href && (
@@ -80,7 +80,7 @@ export function Projects() {
                     View Profile →
                   </a>
                 )}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}

@@ -20,7 +20,7 @@ export function About() {
   const reveal = useScrollReveal()
 
   return (
-    <section id="about" className="relative py-24 px-6 max-w-6xl mx-auto">
+    <section id="about" className="relative py-16 sm:py-24 px-4 sm:px-6 max-w-6xl mx-auto">
       <motion.div {...reveal}>
         <SectionHeading
           eyebrow="About"
@@ -34,19 +34,19 @@ export function About() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6"
       >
         {facts.map((fact) => (
           <motion.div
             key={fact.title}
             variants={fadeUp}
-            className="glass glass-hover rounded-[28px] p-8"
+            className="glass glass-hover rounded-[24px] sm:rounded-[28px] p-6 sm:p-8"
           >
-            <div className="w-10 h-10 rounded-xl bg-mint/15 border border-mint/20 flex items-center justify-center mb-5">
+            <div className="w-10 h-10 rounded-xl bg-mint/15 border border-mint/20 flex items-center justify-center mb-4 sm:mb-5">
               <span className="w-3 h-3 rounded-full bg-mint animate-pulse" />
             </div>
-            <h3 className="font-display text-lg font-bold text-foreground mb-3">{fact.title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{fact.text}</p>
+            <h3 className="font-display text-base sm:text-lg font-bold text-foreground mb-2 sm:mb-3">{fact.title}</h3>
+            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{fact.text}</p>
           </motion.div>
         ))}
       </motion.div>

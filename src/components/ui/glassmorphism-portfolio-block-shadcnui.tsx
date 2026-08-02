@@ -88,35 +88,35 @@ const itemVariants: Variants = {
 
 export function GlassmorphismPortfolioBlock() {
   return (
-    <section id="home" className="relative min-h-screen overflow-hidden px-6 py-24 lg:py-32">
+    <section id="home" className="relative min-h-screen overflow-hidden px-4 sm:px-6 py-20 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative overflow-hidden rounded-3xl border border-border/50 bg-background/45 p-8 backdrop-blur-2xl md:p-12"
+          className="relative overflow-hidden rounded-3xl border border-border/50 bg-background/45 p-5 sm:p-8 md:p-12 backdrop-blur-2xl"
         >
           {/* Glass gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-foreground/[0.05] via-transparent to-transparent pointer-events-none" />
 
-          <div className="relative grid gap-12 lg:grid-cols-2">
+          <div className="relative grid gap-8 lg:gap-12 lg:grid-cols-2">
             {/* Left column - Main content */}
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               <Badge
                 variant="outline"
-                className="inline-flex items-center gap-2 rounded-full border-mint/40 bg-mint/10 px-4 py-1.5 text-xs uppercase tracking-[0.3em] text-mint backdrop-blur transition-colors hover:bg-mint/20"
+                className="inline-flex items-center gap-2 rounded-full border-mint/40 bg-mint/10 px-3.5 py-1 sm:px-4 sm:py-1.5 text-[10px] sm:text-xs uppercase tracking-[0.25em] sm:tracking-[0.3em] text-mint backdrop-blur transition-colors hover:bg-mint/20"
               >
                 Portfolio Insight
               </Badge>
 
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 <motion.h2
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl"
+                  className="text-xl sm:text-2xl font-semibold tracking-tight text-foreground md:text-3xl leading-snug"
                 >
                   Aditya Yudha Hari Pratama, Cybersecurity & Fullstack Developer
                 </motion.h2>
@@ -125,7 +125,7 @@ export function GlassmorphismPortfolioBlock() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="max-w-xl text-base leading-relaxed text-foreground/70 md:text-md"
+                  className="max-w-xl text-sm sm:text-base leading-relaxed text-foreground/70 md:text-md"
                 >
                   Mahasiswa IT di Telkom University yang menggabungkan rasa
                   ingin tahu terhadap keamanan siber dengan keterampilan
@@ -135,7 +135,7 @@ export function GlassmorphismPortfolioBlock() {
               </div>
 
               {/* Highlights grid */}
-              <div className="grid gap-4 sm:grid-cols-1">
+              <div className="grid gap-3 sm:gap-4 sm:grid-cols-1">
                 {highlights.map((item, index) => (
                   <motion.div
                     key={item.title}
@@ -144,14 +144,14 @@ export function GlassmorphismPortfolioBlock() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: 0.1 * index }}
                     whileHover={{ y: -4 }}
-                    className="group relative overflow-hidden rounded-2xl border border-border/40 bg-background/60 p-5 backdrop-blur transition-all hover:border-mint/40 hover:shadow-lg"
+                    className="group relative overflow-hidden rounded-2xl border border-border/40 bg-background/60 p-4 sm:p-5 backdrop-blur transition-all hover:border-mint/40 hover:shadow-lg"
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-foreground/[0.04] via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 -z-10" />
-                    <div className="relative space-y-2">
-                      <p className="text-xs font-semibold uppercase tracking-[0.25em] text-mint/70">
+                    <div className="relative space-y-1.5 sm:space-y-2">
+                      <p className="text-xs font-semibold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-mint/70">
                         {item.title}
                       </p>
-                      <p className="text-sm leading-relaxed text-foreground/70">
+                      <p className="text-xs sm:text-sm leading-relaxed text-foreground/70">
                         {item.description}
                       </p>
                     </div>
@@ -172,7 +172,7 @@ export function GlassmorphismPortfolioBlock() {
                   onClick={() =>
                     window.open("https://github.com/BULLSH4RK", "_blank")
                   }
-                  className="h-12 w-full gap-2 rounded-full bg-mint px-8 text-sm uppercase tracking-[0.25em] text-[#23212C] transition-all hover:bg-mint/85 hover:shadow-lg sm:w-auto"
+                  className="h-12 w-full gap-2 rounded-full bg-mint px-8 text-xs sm:text-sm uppercase tracking-[0.25em] text-[#23212C] transition-all hover:bg-mint/85 hover:shadow-lg sm:w-auto"
                 >
                   View my work
                   <ArrowUpRight className="h-4 w-4" />
@@ -183,7 +183,7 @@ export function GlassmorphismPortfolioBlock() {
             {/* Right column - Profile card */}
             <div className="relative">
               <div className="absolute inset-0 rounded-[32px] bg-gradient-to-b from-mint/15 via-transparent to-transparent blur-3xl" />
-              <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-[28px] border border-border/50 bg-background/60 p-8 backdrop-blur-xl">
+              <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-[28px] border border-border/50 bg-background/60 p-5 sm:p-8 backdrop-blur-xl">
                 <div className="flex flex-col items-center text-center">
                   {/* Avatar with glow */}
                   <motion.div
@@ -191,13 +191,13 @@ export function GlassmorphismPortfolioBlock() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
-                    className="relative mb-6"
+                    className="relative mb-4 sm:mb-6"
                   >
-                    <div className="absolute left-1/2 top-1/2 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full bg-mint/20 blur-2xl" />
+                    <div className="absolute left-1/2 top-1/2 h-28 w-28 sm:h-32 sm:w-32 -translate-x-1/2 -translate-y-1/2 rounded-full bg-mint/20 blur-2xl" />
                     <img
                       src={profileImage}
                       alt="Aditya Yudha Hari Pratama"
-                      className="relative h-32 w-32 rounded-full border border-border/40 object-cover shadow-[0_25px_60px_rgba(15,23,42,0.3)] dark:shadow-[0_25px_60px_rgba(0,0,0,0.6)]"
+                      className="relative h-24 w-24 sm:h-32 sm:w-32 rounded-full border border-border/40 object-cover shadow-[0_25px_60px_rgba(15,23,42,0.3)] dark:shadow-[0_25px_60px_rgba(0,0,0,0.6)]"
                     />
                   </motion.div>
 
@@ -208,10 +208,10 @@ export function GlassmorphismPortfolioBlock() {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="space-y-1"
                   >
-                    <h3 className="text-2xl font-semibold tracking-tight text-foreground">
+                    <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-foreground">
                       Aditya Yudha
                     </h3>
-                    <p className="text-xs font-semibold uppercase tracking-[0.35em] text-mint/70">
+                    <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.3em] sm:tracking-[0.35em] text-mint/70">
                       Cybersecurity · Fullstack
                     </p>
                   </motion.div>
@@ -221,7 +221,7 @@ export function GlassmorphismPortfolioBlock() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.3 }}
-                    className="mt-4 max-w-sm text-sm leading-relaxed text-foreground/70"
+                    className="mt-3 sm:mt-4 max-w-sm text-xs sm:text-sm leading-relaxed text-foreground/70"
                   >
                     Building secure systems from CTF to production — fokus pada
                     web exploitation dan pengembangan aplikasi yang aman.
@@ -234,7 +234,7 @@ export function GlassmorphismPortfolioBlock() {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, margin: "-80px" }}
-                  className="mt-8 flex flex-col gap-3"
+                  className="mt-6 sm:mt-8 flex flex-col gap-2.5 sm:gap-3"
                 >
                   {socialLinks.map((social) => {
                     const Icon = social.icon;
@@ -245,24 +245,24 @@ export function GlassmorphismPortfolioBlock() {
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group flex items-center justify-between rounded-2xl border border-border/40 bg-background/70 px-4 py-3 text-left transition-all hover:-translate-y-0.5 hover:border-mint/40 hover:bg-background/80 hover:shadow-md"
+                        className="group flex items-center justify-between rounded-2xl border border-border/40 bg-background/70 px-3.5 py-2.5 sm:px-4 sm:py-3 text-left transition-all hover:-translate-y-0.5 hover:border-mint/40 hover:bg-background/80 hover:shadow-md"
                         whileHover={{ scale: 1.01 }}
                         whileTap={{ scale: 0.985 }}
                       >
-                        <div className="flex items-center gap-3">
-                          <span className="flex h-10 w-10 items-center justify-center rounded-full border border-mint/30 bg-mint/10 text-mint shadow-[0_10px_30px_rgba(15,23,42,0.2)] transition-all group-hover:shadow-[0_10px_30px_rgba(15,23,42,0.3)] dark:shadow-[0_10px_30px_rgba(0,0,0,0.4)] dark:group-hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                        <div className="flex items-center gap-3 min-w-0 flex-1 mr-2">
+                          <span className="flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full border border-mint/30 bg-mint/10 text-mint shadow-[0_10px_30px_rgba(15,23,42,0.2)] transition-all group-hover:shadow-[0_10px_30px_rgba(15,23,42,0.3)] dark:shadow-[0_10px_30px_rgba(0,0,0,0.4)] dark:group-hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                             <Icon className="h-4 w-4" />
                           </span>
-                          <div>
-                            <p className="text-sm font-semibold text-foreground">
+                          <div className="min-w-0 flex-1">
+                            <p className="text-xs sm:text-sm font-semibold text-foreground truncate">
                               {social.label}
                             </p>
-                            <p className="text-xs text-foreground/60">
+                            <p className="text-[11px] sm:text-xs text-foreground/60 truncate">
                               {social.handle}
                             </p>
                           </div>
                         </div>
-                        <ArrowUpRight className="h-4 w-4 text-foreground/40 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-mint/70" />
+                        <ArrowUpRight className="h-4 w-4 shrink-0 text-foreground/40 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-mint/70" />
                       </motion.a>
                     );
                   })}
