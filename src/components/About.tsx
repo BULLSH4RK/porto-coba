@@ -3,16 +3,16 @@ import { SectionHeading } from "./SectionHeading"
 
 const facts = [
   {
-    title: "Keamanan Siber",
-    text: "Memahami taktik offensive & defensive security lewat CTF dan lab praktis.",
+    title: "Dari CTF ke Production",
+    text: "Pertama kali tertarik pada cybersecurity lewat TryHackMe Cheese CTF dengan teknik LFI-to-RCE. Sekarang menggabungkan mindset offensive security dalam setiap build.",
   },
   {
-    title: "Fullstack Development",
-    text: "Membangun aplikasi dari frontend hingga backend, mobile hingga web.",
+    title: "Fullstack Builder",
+    text: "Membangun aplikasi end-to-end — dari Flutter POS dengan SQLite hingga web POS dengan RBAC dan integrasi LLM lokal.",
   },
   {
-    title: "Problem Solving",
-    text: "Basis matematika kuat: Teori Graph, Linear Algebra, dan Modular Arithmetic.",
+    title: "Math as Foundation",
+    text: "Modular Arithmetic dan Graph Theory bukan sekadar teori — dipakai untuk optimasi sistem keamanan dan algoritma.",
   },
 ]
 
@@ -23,9 +23,9 @@ export function About() {
     <section id="about" className="relative py-24 px-6 max-w-6xl mx-auto">
       <motion.div {...reveal}>
         <SectionHeading
-          eyebrow="01 · About"
+          eyebrow="About"
           title="Siapa saya"
-          description="Mahasiswa IT di Telkom University yang menggabungkan rasa ingin tahu terhadap keamanan siber dengan keterampilan membangun perangkat lunak."
+          description="Mahasiswa IT di Telkom University yang menggabungkan rasa ingin tahu terhadap keamanan siber dengan keterampilan membangun perangkat lunak. Dari CTF di TryHackMe hingga membangun sistem POS yang aman dan efisien."
         />
       </motion.div>
 
@@ -42,8 +42,8 @@ export function About() {
             variants={fadeUp}
             className="glass glass-hover rounded-[28px] p-8"
           >
-            <div className="w-10 h-10 rounded-xl bg-mint/15 border border-mint/20 flex items-center justify-center mb-5">
-              <span className="w-3 h-3 rounded-full bg-mint animate-pulse" />
+            <div className="w-10 h-10 rounded-xl bg-amber/15 border border-amber/20 flex items-center justify-center mb-5">
+              <span className="w-3 h-3 rounded-full bg-amber animate-pulse" />
             </div>
             <h3 className="font-display text-lg font-bold text-foreground mb-3">{fact.title}</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">{fact.text}</p>

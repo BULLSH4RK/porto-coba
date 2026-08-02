@@ -2,25 +2,22 @@ import profileImage from "@/assets/profile.jpg"
 
 export const profile = {
   name: "Aditya Yudha Hari Pratama",
-  role: "IT Student @ Telkom University",
-  tagline: "Cybersecurity Enthusiast & Fullstack Developer",
+  role: "Cybersecurity & Fullstack Developer",
+  tagline: "Building secure systems from CTF to production",
   location: "Indonesia",
-  bio: "Fokus pada tantangan CTF dan pembangunan sistem POS yang aman dan efisien. Eksplorasi mendalam pada Teori Graph, Modular Arithmetic, dan Cybersecurity Tactics.",
+  bio: "Mahasiswa IT di Telkom University dengan fokus pada keamanan siber dan pembangunan sistem. Dari CTF di TryHackMe hingga membangun sistem POS yang aman dan efisien. Eksplorasi mendalam pada Teori Graph, Modular Arithmetic, dan Cybersecurity Tactics.",
   email: "adityayudha.works@gmail.com",
   avatar: profileImage,
-  codeSnippet: `// TryHackMe: yoodha
-// Status: CTF Active
-// Skill: LFI to RCE`,
   links: [
     {
       label: "GitHub",
       href: "https://github.com/BULLSH4RK",
-      accent: "mint",
+      accent: "amber",
     },
     {
       label: "LinkedIn",
       href: "https://linkedin.com/in/aditya-yudha-hari-pratama-906621407",
-      accent: "mint",
+      accent: "amber",
     },
     {
       label: "TryHackMe",

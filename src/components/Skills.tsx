@@ -3,7 +3,7 @@ import { SectionHeading } from "./SectionHeading"
 import { skills } from "@/lib/data"
 
 const categoryColor: Record<string, string> = {
-  Dev: "text-mint border-mint/30 bg-mint/10",
+  Dev: "text-amber border-amber/30 bg-amber/10",
   Sec: "text-red-300 border-red-300/30 bg-red-300/10",
   Math: "text-sky-300 border-sky-300/30 bg-sky-300/10",
 }
@@ -15,7 +15,7 @@ export function Skills() {
     <section id="skills" className="relative py-24 px-6 max-w-6xl mx-auto">
       <motion.div {...reveal}>
         <SectionHeading
-          eyebrow="03 · Skills"
+          eyebrow="Skills"
           title="Technical Core"
           description="Alat dan konsep yang saya gunakan untuk membangun dan menguji sistem."
         />

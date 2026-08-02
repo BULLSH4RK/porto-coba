@@ -9,9 +9,9 @@ export function Projects() {
     <section id="projects" className="relative py-24 px-6 max-w-6xl mx-auto">
       <motion.div {...reveal}>
         <SectionHeading
-          eyebrow="02 · Portfolio"
+          eyebrow="Portfolio"
           title="Featured Works"
-          description="Proyek yang sedang saya garap dan kerjakan — dari sistem kasir hingga eksploitasi web."
+          description="Proyek yang sedang saya garap — dari sistem kasir hingga eksploitasi web. Setiap proyek mengajarkan hal baru tentang keamanan dan arsitektur sistem."
         />
       </motion.div>
 
@@ -34,7 +34,7 @@ export function Projects() {
               <div className="flex flex-col md:flex-row gap-8 items-start">
                 <div className="flex-1">
                   {project.status && (
-                    <span className="inline-block font-mono text-[10px] font-bold uppercase tracking-widest text-mint bg-mint/10 border border-mint/20 px-2.5 py-1 rounded-full mb-4">
+                    <span className="inline-block font-mono text-[10px] font-bold uppercase tracking-widest text-amber bg-amber/10 border border-amber/20 px-2.5 py-1 rounded-full mb-4">
                       {project.status}
                     </span>
                   )}
@@ -61,7 +61,7 @@ export function Projects() {
               </div>
             ) : (
               <div>
-                <div className="w-10 h-10 rounded-xl bg-mint/15 border border-mint/20 flex items-center justify-center mb-6 text-lg">
+                <div className="w-10 h-10 rounded-xl bg-amber/15 border border-amber/20 flex items-center justify-center mb-6 text-lg">
                   {project.emoji}
                 </div>
                 <h4 className="font-display text-xl font-bold text-foreground mb-3">
@@ -75,7 +75,7 @@ export function Projects() {
                     href={project.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-block text-xs font-bold text-mint hover:underline mb-4"
+                    className="inline-block text-xs font-bold text-amber hover:underline mb-4"
                   >
                     View Profile →
                   </a>
