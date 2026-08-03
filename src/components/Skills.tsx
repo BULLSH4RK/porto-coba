@@ -12,7 +12,7 @@ export function Skills() {
   const reveal = useScrollReveal()
 
   return (
-    <section id="skills" className="relative py-16 sm:py-24 px-4 sm:px-6 max-w-6xl mx-auto">
+    <section id="skills" className="relative py-16 sm:py-20 xl:py-24 px-4 sm:px-6 lg:px-8 max-w-6xl xl:max-w-7xl mx-auto">
       <motion.div {...reveal}>
         <SectionHeading
           eyebrow="Skills"
@@ -26,7 +26,7 @@ export function Skills() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
-        className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4"
+        className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4"
       >
         {skills.map((skill) => (
           <motion.div

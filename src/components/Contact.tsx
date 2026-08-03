@@ -21,7 +21,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="relative py-16 sm:py-24 px-4 sm:px-6 max-w-6xl mx-auto">
+    <section id="contact" className="relative py-16 sm:py-20 xl:py-24 px-4 sm:px-6 lg:px-8 max-w-6xl xl:max-w-7xl mx-auto">
       <motion.div {...reveal}>
         <SectionHeading
           eyebrow="Contact"
@@ -37,12 +37,14 @@ export function Contact() {
         viewport={{ once: true, amount: 0.15 }}
         className="grid grid-cols-1 lg:grid-cols-5 gap-4 sm:gap-6"
       >
-        <motion.div variants={fadeUp} className="glass glass-hover rounded-[24px] sm:rounded-[32px] p-5 sm:p-8 lg:col-span-2">
-          <h3 className="font-display text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4">Langsung ke saya</h3>
-          <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-6 sm:mb-8">
-            Jangan ragu untuk menghubungi saya — saya selalu terbuka untuk diskusi, kolaborasi,
-            dan peluang baru.
-          </p>
+        <motion.div variants={fadeUp} className="glass glass-hover rounded-[24px] sm:rounded-[32px] p-5 sm:p-8 lg:col-span-2 space-y-4 sm:space-y-6">
+          <div>
+            <h3 className="font-display text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4">Langsung ke saya</h3>
+            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-6 sm:mb-8">
+              Jangan ragu untuk menghubungi saya — saya selalu terbuka untuk diskusi, kolaborasi,
+              dan peluang baru.
+            </p>
+          </div>
           <div className="space-y-3 sm:space-y-4">
             <a
               href={`mailto:${profile.email}`}

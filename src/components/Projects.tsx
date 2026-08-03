@@ -6,7 +6,7 @@ export function Projects() {
   const reveal = useScrollReveal()
 
   return (
-    <section id="projects" className="relative py-16 sm:py-24 px-4 sm:px-6 max-w-6xl mx-auto">
+    <section id="projects" className="relative py-16 sm:py-20 xl:py-24 px-4 sm:px-6 lg:px-8 max-w-6xl xl:max-w-7xl mx-auto">
       <motion.div {...reveal}>
         <SectionHeading
           eyebrow="Portfolio"
@@ -20,25 +20,25 @@ export function Projects() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
-        className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6"
-      >
+className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6"
+        >
         {projects.map((project) => (
           <motion.article
             key={project.title}
             variants={fadeUp}
-            className={`glass glass-hover rounded-[24px] sm:rounded-[32px] p-6 sm:p-8 ${
+            className={`glass glass-hover rounded-[24px] sm:rounded-[32px] p-5 sm:p-8 ${
               project.size === "lg" ? "md:col-span-2" : ""
             }`}
           >
             {project.size === "lg" ? (
               <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
-                <div className="flex-1">
+                <div className="flex-1 min-w-0">
                   {project.status && (
                     <span className="inline-block font-mono text-[10px] font-bold uppercase tracking-widest text-mint bg-mint/10 border border-mint/20 px-2.5 py-1 rounded-full mb-3 sm:mb-4">
                       {project.status}
                     </span>
                   )}
-                  <h4 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-2 sm:mb-3">
+                  <h4 className="font-display text-lg sm:text-2xl font-bold text-foreground mb-2 sm:mb-3">
                     {project.title}
                   </h4>
                   <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-4 sm:mb-6">
@@ -55,7 +55,7 @@ export function Projects() {
                     ))}
                   </div>
                 </div>
-                <div className="w-full h-32 sm:h-44 md:w-44 md:h-44 shrink-0 bg-white/4 rounded-2xl border border-border flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform">
+                <div className="w-full h-32 sm:h-40 md:w-40 md:h-40 shrink-0 bg-white/4 rounded-2xl border border-border flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform">
                   <span className="text-4xl sm:text-5xl">{project.emoji}</span>
                 </div>
               </div>
@@ -75,7 +75,7 @@ export function Projects() {
                     href={project.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-block text-xs font-bold text-mint hover:underline mb-4"
+                    className="inline-flex items-center min-h-[44px] text-xs font-bold text-mint hover:underline"
                   >
                     View Profile →
                   </a>

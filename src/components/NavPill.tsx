@@ -35,25 +35,25 @@ export function NavPill() {
   }, [])
 
   return (
-    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-1.5rem)] sm:w-[calc(100%-2rem)] max-w-fit md:max-w-max">
+    <header className="fixed top-4 left-0 right-0 z-50 flex justify-center px-3 xs:px-4">
       {/* Desktop Navigation Pill */}
       <nav className="hidden md:flex glass-strong px-5 py-2.5 rounded-full items-center gap-6 shadow-2xl backdrop-blur-xl border border-mint/15">
         <a
           href="#home"
-          className="font-display font-bold text-mint text-base tracking-tight mr-2 flex items-center gap-1.5"
+          className="font-display font-bold text-mint text-base tracking-tight mr-2 flex items-center gap-1.5 min-h-[44px]"
         >
           <span className="h-2 w-2 rounded-full bg-mint animate-pulse" />
           AY<span className="text-muted-foreground">.</span>
         </a>
 
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-4 lg:gap-5">
           {navItems.slice(0, 5).map((item) => {
             const isActive = activeSection === item.href.substring(1)
             return (
               <a
                 key={item.href}
                 href={item.href}
-                className={`text-xs font-semibold tracking-wide transition-all duration-300 relative py-1 ${
+                className={`text-xs font-semibold tracking-wide transition-all duration-300 relative py-1 flex items-center min-h-[44px] ${
                   isActive ? "text-mint font-bold" : "text-foreground/70 hover:text-mint"
                 }`}
               >
@@ -72,7 +72,7 @@ export function NavPill() {
 
         <a
           href="#contact"
-          className="bg-mint text-[#23212C] px-4 py-1.5 rounded-full text-xs font-bold hover:bg-mint/85 transition-all transform hover:scale-105 shadow-md ml-1"
+          className="bg-mint text-[#23212C] px-4 py-2 rounded-full text-xs font-bold hover:bg-mint/85 transition-all transform hover:scale-105 shadow-md ml-1 inline-flex items-center min-h-[44px]"
         >
           Hire Me
         </a>
@@ -80,26 +80,27 @@ export function NavPill() {
 
       {/* Mobile Navigation Bar */}
       <div className="md:hidden w-full max-w-md mx-auto">
-        <div className="glass-strong px-4 py-2.5 rounded-full flex items-center justify-between shadow-2xl backdrop-blur-xl border border-mint/15">
+        <div className="glass-strong px-3 xs:px-4 py-2.5 rounded-full flex items-center justify-between shadow-2xl backdrop-blur-xl border border-mint/15">
           <a
             href="#home"
-            className="font-display font-bold text-mint text-base tracking-tight flex items-center gap-1.5"
+            className="font-display font-bold text-mint text-base tracking-tight flex items-center gap-1.5 min-h-[44px]"
           >
             <span className="h-2 w-2 rounded-full bg-mint animate-pulse" />
             AY<span className="text-muted-foreground">.</span>
           </a>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 sm:gap-2">
             <a
               href="#contact"
-              className="bg-mint text-[#23212C] px-3.5 py-1.5 rounded-full text-xs font-bold hover:bg-mint/85 transition-colors"
+              className="bg-mint text-[#23212C] px-3.5 py-2 rounded-full text-xs font-bold hover:bg-mint/85 transition-colors inline-flex items-center min-h-[44px]"
             >
               Hire Me
             </a>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-1.5 rounded-full text-foreground/80 hover:text-mint hover:bg-white/10 transition-colors focus:outline-none focus:ring-1 focus:ring-mint"
+              className="p-2.5 rounded-full text-foreground/80 hover:text-mint hover:bg-white/10 transition-colors focus:outline-none focus:ring-1 focus:ring-mint inline-flex items-center justify-center"
               aria-label="Toggle menu"
+              aria-expanded={isOpen}
             >
               {isOpen ? <X className="w-5 h-5 text-mint" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -124,7 +125,7 @@ export function NavPill() {
                       key={item.href}
                       href={item.href}
                       onClick={() => setIsOpen(false)}
-                      className={`px-4 py-2.5 rounded-2xl text-sm font-semibold transition-all flex items-center justify-between ${
+                      className={`px-4 py-3 rounded-2xl text-sm font-semibold transition-all flex items-center justify-between min-h-[48px] ${
                         isActive
                           ? "bg-mint/15 text-mint border border-mint/30"
                           : "text-foreground/80 hover:bg-white/5 hover:text-mint"

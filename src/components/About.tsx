@@ -20,7 +20,7 @@ export function About() {
   const reveal = useScrollReveal()
 
   return (
-    <section id="about" className="relative py-16 sm:py-24 px-4 sm:px-6 max-w-6xl mx-auto">
+    <section id="about" className="relative py-16 sm:py-20 xl:py-24 px-4 sm:px-6 lg:px-8 max-w-6xl xl:max-w-7xl mx-auto">
       <motion.div {...reveal}>
         <SectionHeading
           eyebrow="About"

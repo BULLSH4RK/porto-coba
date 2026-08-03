@@ -32,6 +32,24 @@ export const profile = {
   ],
 }
 
+export const highlights = [
+  {
+    title: "Cybersecurity & Fullstack",
+    description:
+      "Membangun aplikasi end-to-end — dari mobile POS Flutter dengan SQLite hingga web POS dengan RBAC dan integrasi LLM lokal.",
+  },
+  {
+    title: "CTF Active Player",
+    description:
+      "Cheese CTF (LFI-to-RCE), Hextroadinary, dan berbagai tantangan web exploitation di TryHackMe.",
+  },
+  {
+    title: "Math as Foundation",
+    description:
+      "Modular Arithmetic dan Graph Theory bukan sekadar teori — dipakai untuk optimasi sistem keamanan dan algoritma.",
+  },
+]
+
 export const projects = [
   {
     title: "Kasir-App (Flutter)",
