@@ -78,23 +78,23 @@ export function GlassmorphismPortfolioBlock() {
           {/* Glass gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-foreground/[0.05] via-transparent to-transparent pointer-events-none" />
 
-          <div className="relative grid gap-8 lg:gap-12 lg:grid-cols-2">
+          <div className="relative grid gap-8 min-w-0 lg:gap-12 lg:grid-cols-2">
             {/* Left column - Main content */}
-            <div className="space-y-6 sm:space-y-8">
+            <div className="space-y-6 sm:space-y-8 min-w-0">
               <Badge
                 variant="outline"
-                className="inline-flex max-w-full shrink items-center gap-2 whitespace-nowrap rounded-full border-mint/40 bg-mint/10 px-3 py-1 text-[9px] uppercase tracking-[0.12em] text-mint backdrop-blur transition-colors hover:bg-mint/20 xs:text-[10px] sm:px-4 sm:py-1.5 sm:text-xs sm:tracking-[0.2em] md:tracking-[0.25em]"
+                className="inline-flex max-w-full shrink-0 items-center gap-2 overflow-hidden text-ellipsis whitespace-nowrap rounded-full border-mint/40 bg-mint/10 px-3 py-1 text-[9px] uppercase tracking-[0.12em] text-mint backdrop-blur transition-colors hover:bg-mint/20 xs:text-[10px] sm:px-4 sm:py-1.5 sm:text-xs sm:tracking-[0.2em] md:tracking-[0.25em]"
               >
                 Portfolio Insight
               </Badge>
 
-              <div className="space-y-3 sm:space-y-4">
+              <div className="space-y-3 sm:space-y-4 min-w-0">
                 <motion.h2
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  className="text-[clamp(1.4rem,3.5vw,2.25rem)] font-semibold tracking-tight text-foreground leading-snug"
+                  className="max-w-[28ch] break-words text-[clamp(1.4rem,3.5vw,2.25rem)] font-semibold tracking-tight text-foreground leading-snug"
                 >
                   {profile.name}, {profile.role}
                 </motion.h2>
@@ -184,7 +184,7 @@ export function GlassmorphismPortfolioBlock() {
             </div>
 
             {/* Right column - Profile card */}
-            <div className="relative">
+            <div className="relative min-w-0">
               <div className="absolute inset-0 rounded-[32px] bg-gradient-to-b from-mint/15 via-transparent to-transparent blur-3xl" />
               <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-[28px] border border-mint/20 bg-background/60 p-5 sm:p-8 backdrop-blur-xl">
                 <div className="flex flex-col items-center text-center">
@@ -211,10 +211,10 @@ export function GlassmorphismPortfolioBlock() {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="space-y-1"
                   >
-                    <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-foreground">
+                    <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-foreground truncate">
                       {profile.name.split(" ").slice(0, 2).join(" ")}
                     </h3>
-                    <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.3em] sm:tracking-[0.35em] text-mint/70">
+                    <p className="max-w-full text-[10px] sm:text-xs font-semibold uppercase tracking-[0.3em] sm:tracking-[0.35em] break-all text-mint/70">
                       {profile.role}
                     </p>
                   </motion.div>
